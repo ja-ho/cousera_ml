@@ -80,10 +80,13 @@ A contour plot is a graphical technique for representing a 3-dimensional surface
 ![gradient_descent_1](./images/gradient_descent_2.png)
 
 ##### gradient descent intuition
-![graddient_descent_intuition](./images/gradient_descent_intuition_1.png)
-![graddient_descent_intuition](./images/gradient_descent_intuition_2.png)
-![graddient_descent_intuition](./images/gradient_descent_intuition_3.png)
+![gradient_descent_intuition](./images/gradient_descent_intuition_1.png)
+![gradient_descent_intuition](./images/gradient_descent_intuition_2.png)
+![gradient_descent_intuition](./images/gradient_descent_intuition_3.png)
 
+##### gradient descent for linear regression
+![gradient_descent_for_linear_regression](./images/gradient_descent_linear_regression.png)
+![gradient_descent_for_linear_regression](./images/gradient_descent_linear_regression_2.png)
 
 
 
