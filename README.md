@@ -1,7 +1,3 @@
-cousera ml lecture summary
-
-
-## week 1.
 # 1. Introduction
 
 ### what is machine learning
@@ -74,7 +70,7 @@ hθ(x) = θ0 + θ1*x
 ![contour_plot](./images/contour_plot.gif)
 A contour plot is a graphical technique for representing a 3-dimensional surface by plotting constant z slices, called contours, on a 2-dimensional format. That is, given a value for z, lines are drawn for connecting the (x,y) coordinates where that z value occurs.
 
-![cost_function_intuition_2](./imaegs/intuition_2_1.png)
+![cost_function_intuition_2](./images/intuition_2_1.png)
 ![cost_function_intuition_2](./images/intuition_2_2.png)
 ![cost_function_intuition_2](./images/intuition_2_3.png)
 
@@ -87,3 +83,14 @@ A contour plot is a graphical technique for representing a 3-dimensional surface
 ![graddient_descent_intuition](./images/gradient_descent_intuition_1.png)
 ![graddient_descent_intuition](./images/gradient_descent_intuition_2.png)
 ![graddient_descent_intuition](./images/gradient_descent_intuition_3.png)
+
+
+
+
+
+
+
+
+
+
+
