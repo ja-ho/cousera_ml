@@ -119,7 +119,7 @@ plot을 한 그림에서 flatten한 부분이 있다면 그곳이 convergence �
 등등 보통 *3배를 해가면서 체크
 이 범위로 debugging을 하는 것이 일반적
 ##### Features and Polynomial Regression
-![Features and Polynomial Regression](./images/Features and Polynomial Regression.png)
+![Features and Polynomial Regression](./images/Features_and_Polynomial_Regression.png)
 
 
 
