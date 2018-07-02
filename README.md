@@ -88,6 +88,38 @@ A contour plot is a graphical technique for representing a 3-dimensional surface
 ![gradient_descent_for_linear_regression](./images/gradient_descent_linear_regression.png)
 ![gradient_descent_for_linear_regression](./images/gradient_descent_linear_regression_2.png)
 
+#4. Multivariate Linear Regression
+
+##### Multiple Features
+![Multiple Features](./images/multiple_features.png)
+##### gradient descent for multiple variables
+![gradient_descent_for_multiple_variables](./images/gradient_descent_for_multiple_variables.png)
+##### gradient_descent_in_practice_1_feature_scaling
+![gradient_descent_in_practice_1_feature_scaling](./images/gradient_descent_in_practice_1_feature_scaling.png)
+feature scaling에서 목표는 -1<= x <= 1이지만
+-3 <= <= 3, -1/3 <= <=1/3 까지는 허용. 이거보다 작거나 크면 feature scaling이 필요.
+
+##### gradient_descent_in_practice_2_learning_rate
+![gradient_descent_in_practice_2_learning_rate](./images/gradient_descent_in_practice_2_learning_rate.png)
+![gradient_descent_in_practice_2_learning_rate_2](./images/gradient_descent_in_practice_2_learning_rate_2.png)
+gradient descent가 제대로 되고 있는지 확인하기 위해 "debugging"을 해야 한다. 그리고 이를 통해 learning rate α를 선택할 수 있다.
+debugging은 gradient descent를 몇 번 iteration을 하는 지를 x-axis로, iteration 후의 θ에 따른 cost function j(θ)을 y-axis로 하는 그래프를 plot하여 할 수 있다. 이 경우 그래프를 통해 제대로 gradient descent가 이뤄지고 있는지 확인이 가능하다. 제대로 되었다면 convergence가 이루어짐을 확인할 수 있다.
+또한, automatic convergence test를 통하여 한 번에 iteration 시 10^(-3)과 같은 작은 thresshold를 지정하여 convergence를 체크할 수 있지만 어떤 값을 선택해야 할 지 어렵다. (그냥 plot 해라)
+
+learning rate은 너무 클 경우 대부분 convergence가 이뤄지지 않고 오히려 증가한다. (이뤄질 경우도 있지만 느리게 local minima가 됨)
+또한, 너무 작을 경우 지나치게 느리게 convergence가 이뤄진다.
+대부분의 경우 debugging을 위해 plot을 그려보고 제대로 gradient descent가 이뤄지지 않는다면 smaller alpha(learning rate)을 이용하면 해결된다.(수학적으로 증명: learning rate이 충분히 작다면 j(θ)는 every iteration마다 decrease한다.)
+
+plot을 한 그림에서 flatten한 부분이 있다면 그곳이 convergence 지점.
+
+대강 learning rate의 범위를 정하고 각각 plot하여 가장 급격하게 decrease하는 모양을 가진 것을 택해라
+
+α = 
+...., 0.0001, 0.0003, 0.001, 0.03, 0.1, .., 1, ....
+등등 보통 *3배를 해가면서 체크
+이 범위로 debugging을 하는 것이 일반적
+##### Features and Polynomial Regression
+![Features and Polynomial Regression](./images/Features and Polynomial Regression.png)
 
 
 
