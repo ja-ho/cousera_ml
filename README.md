@@ -120,6 +120,21 @@ plot을 한 그림에서 flatten한 부분이 있다면 그곳이 convergence �
 이 범위로 debugging을 하는 것이 일반적
 ##### Features and Polynomial Regression
 ![Features and Polynomial Regression](./images/Features_and_Polynomial_Regression.png)
+cf) width, height 변수가 2가지라면 area = width * height로 변수를 모델에 맞게 편하게 설정할 수 있다는 아이디어를 염두에 두자.
+일차함수 뿐만 아니라 다차함수에도 적용이 가능하다. 
+우리의 데이터에 맞는 hypothesis function이 linear하지 않을 수 있다.
+그렇기에 quadratic(2차 함수), cubic(3차 함수), square root(root 함수) 등등의 polynomial한 함수가 필요하다.
+이 경우 feature scaling이 더욱 중요하다.
+##### Normal Equation
+![Normal Equation](./images/normal_equation_1.png)
+![Normal Equation](./images/normal_equation_2.png)
+gradient descent의 alternative method. gradient descent가 iterative한 방식으로 문제를 해결한다면 normal equation은 분석적으로 문제를 해결한다. cost function j(θ)를 각각 partial derivative(편미분)한 식을 0으로 만든다면 기울기가 0이므로 최소값임을 알 수 있다.
+그 때의 각각의 θj가 최소값으로 되는 θ가 된다.
+gradient descent와 normal equation의 선택은 각각 장단이 있다.
+normal equation은 iterative하지 않아도 되고, 따라서 learning rate를  필요로 하지 않는다. 때문에 gradient descent보다 빠르게 local minimum을 찾을 수 있다. 하지만 단점으로는 n by n matrix의 invert를 구할 수 있어야 하는데, 이는 O(N^3)의 시간복잡도를 필요로 한다. n이 커질 경우(feature의 갯수) computation시간이 오래 걸릴 수 있다.
+andrew ng 교수님의 말에 의하면 대략적으로 10000부터 고민을 해야 한다고 한다. modern computer에서 100 x 100, 1000 x 1000은 금새 끝나고 10000부터는 고민이 필요하고 그 이상으로는 gradient descent가 유리하다.
+또한, 더욱 복잡한 알고리즘인 classification, logistic regression alogirhtm들은 normal equation 적용이 불가능하고 gradient descent 알고리즘으로 해결한다.
+
 
 
 
