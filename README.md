@@ -150,6 +150,32 @@ feature 간에 연관성이 존재한다는 것이다. 즉 어떠한 feature들�
 혹은 feature의 수가 데이터에 비해 너무 많을 경우이다.
 
 
+#6. Classification and Representation
+##### classification
+![classification.png](./images/classification.png)
+classfication 문제에서 linear regression을 적용해보는 것을 생각할 수 있다. 어떤 dataset에서는 hypothesis가 잘 맞아 떨어질 수도 있다.(threshold를 적용해서 0.5 정도에 맞춰서 나누기) 하지만 대부분의 경우, 어떤 특이한 사례에 맞춰 hypothesis가 전혀 다르게 그려질 수 있다. 또한, output y는 classification에서는 0 <=  <= 1이지만, linear regression을 적용할 때, y가 <0 또는 > 1이 될 수 있다.
+따라서 우리는 classification 문제에서 logistic regression algorithm을 적용하여 해결할 것이다.
+
+##### Hypothesis Representation
+![hypothesis_representation.png](./images/hypothesis_representation.png)
+logistic regression에서의 hypothesis h(x)는 theta.T @ x를 함수 g의 parameter로 넘기는 것이다. 즉, h(x) = g(theta.T @ x)이다.
+함수 g는 보통 sigmoid function ( = logistic function)을 사용한다.
+sigmoid function = 1 / (1 + e^(-z))의 값을 취하고 이는 0<= <= 1 사이에 값이 존재한다.
+classification problem에서 hypothesis의 의미는 y= 1(또는 다른 labeld value)이 나올 확률이다.
+h(x) = P(y=1|x; theta) = 1 - P(y=0|x; theta)
+-> probability (y = 1) given x, parameterized theta
+
+##### Decision Boundary
+![decision_boundary.png](./images/decision_boundary.png)
+![decision_boundary.png](./images/decision_boundary_2.png)
+y= 1을 판단하기 위해서는 h(x)는 >= 0.5
+y= 0을 판단하기 위해서는 h(x)는 <  0.5이다.
+h(x) = g(z)이고 z는 theta.T @ x이다.
+함수 g는 sigmoid function이므로, theta.T @ x 가 0 <= 일 경우 h(x)가 >= 0.5가 되고, ( =  y = 1)
+theta.T @ x 가 0 < 일 경우, h(x) 는 < 0.5가 된다. ( y = 0)
+
+decision boundary는 y= 0과 y=1이 되는 area를 나누는 line을 의미한다. 그리고 decisioni boundary는 dataset이 아닌, hypothesis function에 의해 결정된다. (dataset은 hypothesis의 parameter를 결정하는 역할)
+decision boundary는 반드시 linear할 필요 없다.
 
 
 
