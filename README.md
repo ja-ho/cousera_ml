@@ -177,6 +177,19 @@ theta.T @ x 가 0 < 일 경우, h(x) 는 < 0.5가 된다. ( y = 0)
 decision boundary는 y= 0과 y=1이 되는 area를 나누는 line을 의미한다. 그리고 decisioni boundary는 dataset이 아닌, hypothesis function에 의해 결정된다. (dataset은 hypothesis의 parameter를 결정하는 역할)
 decision boundary는 반드시 linear할 필요 없다.
 
+##### cost function(logistic regression)
+![cost_function.png](./images/logistic_regression_cost_function_1.png)
+![cost_function.png](./images/logistic_regression_cost_function_2.png)
+
+linear regression에서 사용했던 cost function은 logistic regression에서는 사용할 수 없다. 그 이유는 logistic regression에서 사용했던 h(x)는 linear하지 않기 때문에, sigmoid function을 사용하기 때문에 square, 즉 제곱을 하게 되면 nonconvex function이 되버린다. 따라서 gradient descent를 한다 하더라도 수많은 local minimum이 존재하기 때문에 global minimum이 되기 힘들다.
+따라서 다른 cost function을 사용해야 한다.
+y = 1일 경우 -> cost function = -log(h(x))
+y = 0일 경우 -> cost function = -log(1 - h(x))
+이 function들을 plot하면 그림과 같은 형태가 된다.
+기존 log 함수를 -하여 상하대칭하고 h(x)가 0<= <=1의 범위를 갖는걸 생각하자
+y=1일 경우 h(x)가 1일 경우 정확하게 맞기 때문에 cost는 0,
+		  h(x)가 0일 경우 cost를 infinity로 줘서 learning algorithm에게 엄청난 penalty를 주는 식이다.
+이러한 cost function은 우리에게 convex function임을 보장해준다.
 
 
 
