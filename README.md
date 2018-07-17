@@ -153,7 +153,7 @@ feature 간에 연관성이 존재한다는 것이다. 즉 어떠한 feature들�
 #6. Classification and Representation
 ##### classification
 ![classification.png](./images/classification.png)
-classfication 문제에서 linear regression을 적용해보는 것을 생각할 수 있다. 어떤 dataset에서는 hypothesis가 잘 맞아 떨어질 수도 있다.(threshold를 적용해서 0.5 정도에 맞춰서 나누기) 하지만 대부분의 경우, 어떤 특이한 사례에 맞춰 hypothesis가 전혀 다르게 그려질 수 있다. 또한, output y는 classification에서는 0 <=  <= 1이지만, linear regression을 적용할 때, y가 <0 또는 > 1이 될 수 있다.
+classfication 문제에서 linear regression을 적용해보는 것을 생각할 수 있다. 어떤 dataset에서는 hypothesis가 잘 맞아 떨어질 수도 있다.(threshold를 적용해서 0.5 정도에 맞춰서 나누기) 하지만 대부분의 경우, 어떤 특이한 사례(irregular)에 맞춰 hypothesis가 전혀 다르게 그려질 수 있다. 또한, output y는 classification에서는 0 <=  <= 1이지만, linear regression을 적용할 때, y가 <0 또는 > 1이 될 수 있다.
 따라서 우리는 classification 문제에서 logistic regression algorithm을 적용하여 해결할 것이다.
 
 ##### Hypothesis Representation
@@ -177,6 +177,7 @@ theta.T @ x 가 0 < 일 경우, h(x) 는 < 0.5가 된다. ( y = 0)
 decision boundary는 y= 0과 y=1이 되는 area를 나누는 line을 의미한다. 그리고 decisioni boundary는 dataset이 아닌, hypothesis function에 의해 결정된다. (dataset은 hypothesis의 parameter를 결정하는 역할)
 decision boundary는 반드시 linear할 필요 없다.
 
+#7. Logistic Regression Model
 ##### cost function(logistic regression)
 ![cost_function.png](./images/logistic_regression_cost_function_1.png)
 ![cost_function.png](./images/logistic_regression_cost_function_2.png)
@@ -191,7 +192,19 @@ y=1일 경우 h(x)가 1일 경우 정확하게 맞기 때문에 cost는 0,
 		  h(x)가 0일 경우 cost를 infinity로 줘서 learning algorithm에게 엄청난 penalty를 주는 식이다.
 이러한 cost function은 우리에게 convex function임을 보장해준다.
 
+simplified_cost_function_and_gradient_descent_logistic_regression_2.png
 
+##### simplified cost function and gradient descent(logistic regression)
+![simplifed_cost_function.png](./images/simplified_cost_function_and_gradient_descent_logistic_regression.png)
+![gradient_descent_logistic_regression.png](./images/simplified_cost_function_and_gradient_descent_logistic_regression_2.png)
+
+##### advanced optimization(logistic regression)
+![advanced optimization.png](./images/advanced_optimization.png)
+
+#8. Multiclass Classfication
+##### multiclass classification
+![one_vs_all.png](./images/multiclass_classfication_onevsall.png)
+	
 
 
 
